@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+![img](dragonr.jpg)
+
 cymruservices is an R package that provides interfaces to various [Team Cymru Services](http://www.team-cymru.org/services.html) including:
 
 - [The Bogon Reference](http://www.team-cymru.org/bogon-reference.html)
@@ -61,6 +63,9 @@ library(testthat)
 
 date()
 
+# only using `force=TRUE` to ensure output for the example
+# see the help for each function to see why this is a bad
+# idea to run force all the time
 head(ipv4_bogons(force=TRUE))
 
 head(ipv6_bogons(force=TRUE))

@@ -1,4 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+![img](dragonr.jpg)
+
 cymruservices is an R package that provides interfaces to various [Team Cymru Services](http://www.team-cymru.org/services.html) including:
 
 -   [The Bogon Reference](http://www.team-cymru.org/bogon-reference.html)
@@ -41,8 +43,11 @@ library(cymruservices)
 library(testthat)
 
 date()
-#> [1] "Wed Jul 22 14:43:31 2015"
+#> [1] "Wed Jul 22 15:02:04 2015"
 
+# only using `force=TRUE` to ensure output for the example
+# see the help for each function to see why this is a bad
+# idea to run force all the time
 head(ipv4_bogons(force=TRUE))
 #> [1] "0.0.0.0/8"      "2.56.0.0/14"    "5.45.32.0/20"   "5.133.64.0/18"  "5.180.0.0/14"   "5.199.184.0/21"
 
@@ -104,10 +109,10 @@ malware_hash(c("1250ac278944a0737707cf40a0fbecd4b5a17c9d",
               "e6dc4f4d5061299bc5e76f5cd8d16610",
               "e1112134b6dcc8bed54e0e34d8ac272795e73d74"))
 #>                                   sha1_md5 last_known_timestamp detection_pct
-#> 1 1250ac278944a0737707cf40a0fbecd4b5a17c9d  2015-07-22 18:43:36            NA
-#> 2         7697561ccbbdd1661c25c86762117613  2015-07-22 18:43:36            NA
+#> 1 1250ac278944a0737707cf40a0fbecd4b5a17c9d  2015-07-22 19:02:08            NA
+#> 2         7697561ccbbdd1661c25c86762117613  2015-07-22 19:02:08            NA
 #> 3         cbed16069043a0bf3c92fff9a99cccdc  2010-04-25 00:04:03          0.71
-#> 4         e6dc4f4d5061299bc5e76f5cd8d16610  2015-07-22 18:43:36            NA
+#> 4         e6dc4f4d5061299bc5e76f5cd8d16610  2015-07-22 19:02:08            NA
 #> 5 e1112134b6dcc8bed54e0e34d8ac272795e73d74  2010-06-22 15:52:26          0.79
 
 test_dir("tests/")
