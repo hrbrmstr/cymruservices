@@ -1,8 +1,12 @@
 Package: cymruservices
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
+Title: Query Team Cymru IP Address, Autonomous System Number (ASN),
+       Border Gateway Protocol (BGP), Bogon and Malware Hash Data Services
+Version: 0.1.0
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.2.1)
+Description: A toolkit for querying Team Cymru <team-cymru.org> IP address,
+             Autonomous System Number (ASN), Border Gateway Protocol (BGP), Bogon
+             and Malware Hash Data Services.
+Depends: R (>= 3.2.0)
 License: MIT + file LICENSE
-LazyData: true
+Suggests: testthat
+Imports: utils, stringr
