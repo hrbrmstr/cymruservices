@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Build Status](https://travis-ci.org/hrbrmstr/metricsgraphics.svg)](https://travis-ci.org/hrbrmstr/cymruservices) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/cymruservices)](http://cran.r-project.org/web/packages/cymruservices) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/cymruservices)
+[![Build Status](https://travis-ci.org/hrbrmstr/cymruservices.svg)](https://travis-ci.org/hrbrmstr/cymruservices) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/cymruservices)](http://cran.r-project.org/web/packages/cymruservices) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/cymruservices)
 
 On CRAN: [<http://cran.r-project.org/web/packages/cymruservices/index.html>](http://cran.r-project.org/web/packages/cymruservices/index.html)
 
@@ -50,7 +50,7 @@ library(cymruservices)
 library(testthat)
 
 date()
-#> [1] "Thu Jul 23 06:10:01 2015"
+#> [1] "Thu Jul 23 06:12:38 2015"
 
 # only using `force=TRUE` to ensure output for the example
 # see the help for each function to see why this is a bad
@@ -116,10 +116,10 @@ malware_hash(c("1250ac278944a0737707cf40a0fbecd4b5a17c9d",
               "e6dc4f4d5061299bc5e76f5cd8d16610",
               "e1112134b6dcc8bed54e0e34d8ac272795e73d74"))
 #>                                   sha1_md5 last_known_timestamp detection_pct
-#> 1 1250ac278944a0737707cf40a0fbecd4b5a17c9d  2015-07-23 10:10:05            NA
-#> 2         7697561ccbbdd1661c25c86762117613  2015-07-23 10:10:05            NA
+#> 1 1250ac278944a0737707cf40a0fbecd4b5a17c9d  2015-07-23 10:12:42            NA
+#> 2         7697561ccbbdd1661c25c86762117613  2015-07-23 10:12:42            NA
 #> 3         cbed16069043a0bf3c92fff9a99cccdc  2010-04-25 00:04:03          0.71
-#> 4         e6dc4f4d5061299bc5e76f5cd8d16610  2015-07-23 10:10:05            NA
+#> 4         e6dc4f4d5061299bc5e76f5cd8d16610  2015-07-23 10:12:42            NA
 #> 5 e1112134b6dcc8bed54e0e34d8ac272795e73d74  2010-06-22 15:52:26          0.79
 
 test_dir("tests/")
