@@ -6,13 +6,19 @@ output:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
 ```
+[![Build Status](https://travis-ci.org/hrbrmstr/metricsgraphics.svg)](https://travis-ci.org/hrbrmstr/cymruservices) 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/cymruservices)](http://cran.r-project.org/web/packages/cymruservices) 
+![downloads](http://cranlogs.r-pkg.org/badges/grand-total/cymruservices)
+
+On CRAN: [http://cran.r-project.org/web/packages/cymruservices/index.html](http://cran.r-project.org/web/packages/cymruservices/index.html)
 
 ![img](dragonr.jpg)
 
@@ -33,21 +39,24 @@ The following functions are implemented:
 
 ### News
 
+- Version 0.1.0 is [on CRAN](http://cran.r-project.org/web/packages/cymruservices/index.html)
 - Version 0.1.0.9999 released
 
 ### Installation
 
-```{r eval=FALSE}
+```{r install, eval=FALSE}
 devtools::install_github("hrbrmstr/cymruservices")
+# OR
+install.packages("cymruservices")
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r moar_setup, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 options(width=120)
 ```
 
 ### Usage
 
-```{r}
+```{r example}
 library(cymruservices)
 
 # current verison
@@ -57,7 +66,7 @@ packageVersion("cymruservices")
 
 ### Test Results
 
-```{r}
+```{r test}
 library(cymruservices)
 library(testthat)
 
