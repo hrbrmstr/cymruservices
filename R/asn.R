@@ -69,7 +69,6 @@ bulk_origin <- function(ips, timeout=getOption("timeout")) {
                       as_name=rep(NA, length(ips))))
   }
 
-
   # trim header, split fields and convert results
   response <- trim_df(read.csv(textConnection(tail(response, -1)),
                                stringsAsFactors=FALSE, sep="|", header=FALSE))
