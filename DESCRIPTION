@@ -1,7 +1,7 @@
 Package: cymruservices
 Title: Query 'Team Cymru' 'IP' Address, Autonomous System Number ('ASN'),
     Border Gateway Protocol ('BGP'), Bogon and 'Malware' Hash Data Services
-Version: 0.2.0.9999
+Version: 0.2.0
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
 Description: A toolkit for querying 'Team Cymru' <http://team-cymru.org> 'IP'
     address, Autonomous System Number ('ASN'), Border Gateway Protocol ('BGP'), Bogon

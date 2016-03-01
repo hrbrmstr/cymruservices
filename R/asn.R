@@ -216,7 +216,7 @@ bulk_origin_asn <- function(asns, timeout=getOption("timeout")) {
   close(con)
 
   if (length(response) == 0) {
-    message("Error reading fromconnection to v4.whois.cymru.com")
+    message("Error reading from connection to v4.whois.cymru.com")
     return(data.frame(as=rep(NA, length(asns)),
                       cc=rep(NA, length(asns)),
                       registry=rep(NA, length(asns)),
