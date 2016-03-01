@@ -8,5 +8,6 @@
 #' @docType package
 #' @author Bob Rudis (@@hrbrmstr)
 #' @import utils
+#' @importFrom purrr safely
 #' @importFrom stringr str_match_all
 NULL

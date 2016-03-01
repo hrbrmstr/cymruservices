@@ -1,0 +1,17 @@
+## Version 0.2.0
+
+- cymru service instability was causing CRAN daily testing errors so
+  examples were wrapped in \dontrun{} even though the socketConnection()
+  calls were wrapped in tryCatch blocks.
+- added a `timeout` parameter to the `whois`-based services
+- calls that used to error out and return `NA` now return `NA`-filled `data.frame`s
+
+## Version 0.1.0
+
+- CRAN release
+- `bulk_origin`:	Retrieves BGP Origin ASN info for a list of IPv4 addresses
+- `bulk_origin_asn`:	Retrieves BGP Origin ASN info for a list of ASN ids
+- `bulk_peer`:	Retrieves BGP Peer ASN info for a list of IPv4 addresses
+- `ipv4_bogons`:	Retrieve list of IPv4 "full bogons" from Team Cymru webservice
+- `ipv6_bogons`:	Retrieve list of IPv6 "full bogons" from Team Cymru webservice
+- `malware_hash`:	Retrieves malware hash metadata from the Malware Hash Registry

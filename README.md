@@ -22,6 +22,7 @@ The following functions are implemented:
 
 ### News
 
+-   Version 0.2.0.9999 `timeout` parameter added to `whois`-based functions
 -   Version 0.1.0 is [on CRAN](http://cran.r-project.org/web/packages/cymruservices/index.html)
 -   Version 0.1.0.9999 released
 
