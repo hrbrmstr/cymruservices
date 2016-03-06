@@ -1,3 +1,7 @@
+sock <- safely(socketConnection)
+
+safe_rl <- safely(readLines)
+
 # remove leading/trailing blanks around all strings in data.frame cols
 trim_df <- function(df, stringsAsFactors=FALSE) {
   data.frame(lapply(df, function (v) {

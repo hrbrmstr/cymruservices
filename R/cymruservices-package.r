@@ -7,7 +7,8 @@
 #'       API functions to work properly.
 #' @docType package
 #' @author Bob Rudis (@@hrbrmstr)
-#' @import utils
-#' @importFrom purrr safely
+#' @import utils memoise
+#' @importFrom purrr safely flatten_chr walk
+#' @importFrom dplyr tbl_df
 #' @importFrom stringr str_match_all
 NULL

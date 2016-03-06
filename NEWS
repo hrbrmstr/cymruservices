@@ -1,4 +1,12 @@
-## Version 0.2.0
+Changes in cymruservices 0.3.0
+==============================
+
+- implicit API response caching has been added via the memoise package.
+- there is a new `flush()` function which flushes the new API caches
+- functions that used to return `data.frame`s now return `tbl_df`s
+
+Changes in cymruservices 0.2.0
+==============================
 
 - cymru service instability was causing CRAN daily testing errors so
   examples were wrapped in \dontrun{} even though the socketConnection()
@@ -6,7 +14,8 @@
 - added a `timeout` parameter to the `whois`-based services
 - calls that used to error out and return `NA` now return `NA`-filled `data.frame`s
 
-## Version 0.1.0
+Changes in cymruservices 0.1.0
+==============================
 
 - CRAN release
 - `bulk_origin`:	Retrieves BGP Origin ASN info for a list of IPv4 addresses
