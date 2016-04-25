@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Build Status](https://travis-ci.org/hrbrmstr/cymruservices.svg)](https://travis-ci.org/hrbrmstr/cymruservices) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/cymruservices)](http://cran.r-project.org/package=cymruservices) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/cymruservices/)
+[![Build Status](https://travis-ci.org/hrbrmstr/cymruservices.svg)](https://travis-ci.org/hrbrmstr/cymruservices) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/cymruservices)](http://cran.r-project.org/package=cymruservices) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/cymruservices)
 
 ![img](dragonr.jpg)
 
