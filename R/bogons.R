@@ -2,7 +2,7 @@
 
 .ipv4_bogons <- function(force=FALSE, cached_bogons=NA) {
 
-  BOGONS_URL <- "http://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
+  BOGONS_URL <- "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
 
   if (Sys.getenv("CYMRU_LAST_V4_BOGON") == "") {
 
@@ -58,7 +58,7 @@
 
 .ipv6_bogons <- function(force=FALSE, cached_bogons=NA) {
 
-  FULL_BOGONS_URL <- "http://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
+  FULL_BOGONS_URL <- "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
 
   if (Sys.getenv("CYMRU_LAST_V6_BOGON") == "") {
 

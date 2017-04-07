@@ -17,6 +17,5 @@ A direct connection to TCP Port 43 (WHOIS) is required for most of these
       API functions to work properly.
 }
 \author{
-Bob Rudis (@hrbrmstr)
+Bob Rudis (bob@rud.is)
 }
-

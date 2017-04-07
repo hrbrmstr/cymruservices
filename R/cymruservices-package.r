@@ -6,8 +6,9 @@
 #' @note A direct connection to TCP Port 43 (WHOIS) is required for most of these
 #'       API functions to work properly.
 #' @docType package
-#' @author Bob Rudis (@@hrbrmstr)
+#' @author Bob Rudis (bob@@rud.is)
 #' @import utils memoise
+#' @importFrom pingr ping_port
 #' @importFrom purrr safely flatten_chr walk
 #' @importFrom dplyr tbl_df
 #' @importFrom stringr str_match_all
