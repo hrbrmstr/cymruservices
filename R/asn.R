@@ -52,7 +52,8 @@
 
 .bulk_peer <- function(ips, timeout=getOption("timeout")) {
 
-  host <- "v4-peer.whois.cymru.com"
+  host <- "peer.whois.cymru.com"
+  # host <- "v4-peer.whois.cymru.com"
   port <- 43
 
   # setup query

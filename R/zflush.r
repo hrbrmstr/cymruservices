@@ -1,9 +1,11 @@
-valid_flushed <- list("origin"=bulk_origin,
-                      "peer"=bulk_peer,
-                      "asn"=bulk_origin_asn,
-                      "v4_bogons"=ipv4_bogons,
-                      "v6_bogons"=ipv6_bogons,
-                      "hash"=malware_hash)
+list(
+  "origin" = bulk_origin,
+  "peer" = bulk_peer,
+  "asn" = bulk_origin_asn,
+  "v4_bogons" = ipv4_bogons,
+  "v6_bogons" = ipv6_bogons,
+  "hash" = malware_hash
+) -> valid_flushed
 
 #' Flush cached results
 #'

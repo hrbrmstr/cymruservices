@@ -20,7 +20,14 @@ knitr::opts_chunk$set(
 
 ![img](dragonr.jpg)
 
-cymruservices is an R package that provides interfaces to various [Team Cymru Services](http://www.team-cymru.org/services.html) including:
+#  cymruservices 
+
+Query 'Team Cymru' 'IP' Address, Autonomous System Number ('ASN'),
+Border Gateway Protocol ('BGP'), Bogon and 'Malware' Hash Data Services
+
+## Description
+
+`cymruservices` is an R package that provides interfaces to various [Team Cymru Services](http://www.team-cymru.org/services.html) including:
 
 - [The Bogon Reference](http://www.team-cymru.org/bogon-reference.html)
 - [The IP to ASN Mapping Project](http://www.team-cymru.org/IP-ASN-mapping.html)
@@ -35,13 +42,6 @@ The following functions are implemented:
 - `ipv6_bogons`:	Retrieve list of IPv6 "full bogons" from Team Cymru webservice
 - `malware_hash`:	Retrieves malware hash metadata from the Malware Hash Registry
 - `flush`: flush one or more API caches
-
-### News
-
-- Version 0.3.0 uses `memoise` to cache API responses. See `flush()` for details. functions that used to return `data.frame`s now return `tbl_df`s
-- Version 0.2.0 `timeout` parameter added to `whois`-based functions
-- Version 0.1.0 is on CRAN
-- Version 0.1.0.9999 released
 
 ### Installation
 

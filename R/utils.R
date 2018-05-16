@@ -1,6 +1,6 @@
-sock <- safely(socketConnection)
+sock <- purrr::safely(socketConnection)
 
-safe_rl <- safely(readLines)
+safe_rl <- purrr::safely(readLines)
 
 # remove leading/trailing blanks around all strings in data.frame cols
 trim_df <- function(df, stringsAsFactors=FALSE) {
@@ -10,5 +10,5 @@ trim_df <- function(df, stringsAsFactors=FALSE) {
     } else {
       v
     }
-  }), stringsAsFactors=stringsAsFactors)
+  }), stringsAsFactors = stringsAsFactors)
 }
