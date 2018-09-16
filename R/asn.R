@@ -14,13 +14,17 @@
   con <- sock(host=host, port=port, blocking=TRUE, open="r+", timeout=timeout)
   if (is.null(con$result)) {
     message("Error opening connection to v4.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(as=rep(NA, length(ips)),
-                                    ip=rep(NA, length(ips)),
-                                    bgp_prefix=rep(NA, length(ips)),
-                                    cc=rep(NA, length(ips)),
-                                    registry=rep(NA, length(ips)),
-                                    allocated=rep(NA, length(ips)),
-                                    as_name=rep(NA, length(ips)))))
+    data.frame(
+      as = rep(NA, length(ips)),
+      ip = rep(NA, length(ips)),
+      bgp_prefix = rep(NA, length(ips)),
+      cc = rep(NA, length(ips)),
+      registry = rep(NA, length(ips)),
+      allocated = rep(NA, length(ips)),
+      as_name = rep(NA, length(ips))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
   con <- con$result
@@ -30,23 +34,32 @@
 
   if (length(response) == 0) {
     message("Error reading from connection to v4.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(as=rep(NA, length(ips)),
-                                    ip=rep(NA, length(ips)),
-                                    bgp_prefix=rep(NA, length(ips)),
-                                    cc=rep(NA, length(ips)),
-                                    registry=rep(NA, length(ips)),
-                                    allocated=rep(NA, length(ips)),
-                                    as_name=rep(NA, length(ips)))))
+    data.frame(
+      as = rep(NA, length(ips)),
+      ip = rep(NA, length(ips)),
+      bgp_prefix = rep(NA, length(ips)),
+      cc = rep(NA, length(ips)),
+      registry = rep(NA, length(ips)),
+      allocated = rep(NA, length(ips)),
+      as_name = rep(NA, length(ips))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
   # trim header, split fields and convert results
-  response <- trim_df(read.csv(textConnection(tail(response, -1)),
-                               stringsAsFactors=FALSE, sep="|", header=FALSE))
-  names(response) <- c("as", "ip", "bgp_prefix", "cc",
-                       "registry", "allocated", "as_name")
-  response[response=="NA"] <- NA
-
-  return(dplyr::tbl_df(response))
+  trim_df(
+    read.csv(
+      textConnection(tail(response, -1)),
+      stringsAsFactors = FALSE, 
+      sep = "|", 
+      header = FALSE
+    )
+  ) -> response
+  names(response) <- c("as", "ip", "bgp_prefix", "cc","registry", "allocated", "as_name")
+  response[(response == "NA")] <- NA
+  class(response) <- c("tbl_df", "tbl", "data.frame")
+  return(response)
 
 }
 
@@ -65,13 +78,17 @@
   con <- sock(host=host, port=port, blocking=TRUE, open="r+", timeout=timeout)
   if (is.null(con$result)) {
     message("Error opening connection to v4-peer.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(peer_as=rep(NA, length(ips)),
-                                    ip=rep(NA, length(ips)),
-                                    bgp_prefix=rep(NA, length(ips)),
-                                    cc=rep(NA, length(ips)),
-                                    registry=rep(NA, length(ips)),
-                                    allocated=rep(NA, length(ips)),
-                                    peer_as_name=rep(NA, length(ips)))))
+    data.frame(
+      peer_as = rep(NA, length(ips)),
+      ip = rep(NA, length(ips)),
+      bgp_prefix = rep(NA, length(ips)),
+      cc = rep(NA, length(ips)),
+      registry = rep(NA, length(ips)),
+      allocated = rep(NA, length(ips)),
+      peer_as_name = rep(NA, length(ips))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
   con <- con$result
@@ -81,24 +98,33 @@
 
   if (length(response) == 0) {
     message("Error reading from connection to v4-peer.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(peer_as=rep(NA, length(ips)),
-                                    ip=rep(NA, length(ips)),
-                                    bgp_prefix=rep(NA, length(ips)),
-                                    cc=rep(NA, length(ips)),
-                                    registry=rep(NA, length(ips)),
-                                    allocated=rep(NA, length(ips)),
-                                    peer_as_name=rep(NA, length(ips)))))
+    data.frame(
+      peer_as = rep(NA, length(ips)),
+      ip = rep(NA, length(ips)),
+      bgp_prefix = rep(NA, length(ips)),
+      cc = rep(NA, length(ips)),
+      registry = rep(NA, length(ips)),
+      allocated = rep(NA, length(ips)),
+      peer_as_name = rep(NA, length(ips))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
 
   # trim header, split fields and convert results
-  response <- trim_df(read.csv(textConnection(tail(response, -1)),
-                               stringsAsFactors=FALSE, sep="|", header=FALSE))
-  names(response) <- c("peer_as", "ip", "bgp_prefix", "cc",
-                       "registry", "allocated", "peer_as_name")
-  response[response=="NA"] <- NA
-
-  return(dplyr::tbl_df(response))
+  trim_df(
+    read.csv(
+      textConnection(tail(response, -1)),
+      stringsAsFactors = FALSE, 
+      sep = "|", 
+      header = FALSE
+    )
+  ) -> response
+  names(response) <- c("peer_as", "ip", "bgp_prefix", "cc", "registry", "allocated", "peer_as_name")
+  response[(response == "NA")] <- NA
+  class(response) <- c("tbl_df", "tbl", "data.frame")
+  return(response)
 
 }
 
@@ -117,11 +143,15 @@
   con <- sock(host=host, port=port, blocking=TRUE, open="r+", timeout=timeout)
   if (is.null(con$result)) {
     message("Error opening connection to v4.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(as=rep(NA, length(asns)),
-                                    cc=rep(NA, length(asns)),
-                                    registry=rep(NA, length(asns)),
-                                    allocated=rep(NA, length(asns)),
-                                    as_name=rep(NA, length(asns)))))
+    data.frame(
+      as = rep(NA, length(asns)),
+      cc = rep(NA, length(asns)),
+      registry = rep(NA, length(asns)),
+      allocated = rep(NA, length(asns)),
+      as_name = rep(NA, length(asns))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
   con <- con$result
@@ -131,20 +161,30 @@
 
   if (length(response) == 0) {
     message("Error reading from connection to v4.whois.cymru.com")
-    return(dplyr::tbl_df(data.frame(as=rep(NA, length(asns)),
-                                    cc=rep(NA, length(asns)),
-                                    registry=rep(NA, length(asns)),
-                                    allocated=rep(NA, length(asns)),
-                                    as_name=rep(NA, length(asns)))))
+    data.frame(
+      as = rep(NA, length(asns)),
+      cc = rep(NA, length(asns)),
+      registry = rep(NA, length(asns)),
+      allocated = rep(NA, length(asns)),
+      as_name = rep(NA, length(asns))
+    ) -> out
+    class(out) <- c("tbl_df", "tbl", "data.frame")
+    return(out)
   }
 
   # trim header, split fields and convert results
-  response <- trim_df(read.csv(textConnection(tail(response, -1)),
-                               stringsAsFactors=FALSE, sep="|", header=FALSE))
+  trim_df(
+    read.csv(
+      textConnection(tail(response, -1)),
+      stringsAsFactors = FALSE, 
+      sep = "|", 
+      header = FALSE
+    )
+  ) -> response
   names(response) <- c("as", "cc", "registry", "allocated", "as_name")
-  response[response=="NA"] <- NA
-
-  return(dplyr::tbl_df(response))
+  response[(response == "NA")] <- NA
+  class(response) <- c("tbl_df", "tbl", "data.frame")
+  return(response)
 
 }
 

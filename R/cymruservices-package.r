@@ -9,7 +9,5 @@
 #' @author Bob Rudis (bob@@rud.is)
 #' @import utils memoise
 #' @importFrom pingr ping_port
-#' @importFrom purrr safely flatten_chr walk
-#' @importFrom dplyr tbl_df
-#' @importFrom stringr str_match_all
+#' @importFrom stringi stri_match_all_regex
 NULL

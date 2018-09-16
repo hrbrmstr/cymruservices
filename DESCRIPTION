@@ -16,10 +16,8 @@ Suggests:
     testthat
 Imports:
     utils,
-    stringr,
-    purrr,
+    stringi,
     memoise,
-    dplyr,
     pingr
 Encoding: UTF-8
 RoxygenNote: 6.0.1.9000

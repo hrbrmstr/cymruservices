@@ -39,7 +39,7 @@ list(
 #' }
 flush <- function(..., quiet=TRUE) {
 
-  dots <- purrr::flatten_chr(list(...))
+  dots <- unlist(list(...), use.names = FALSE)
 
   can_flush <- names(valid_flushed)
   if (length(dots) == 0) { dots <- can_flush }
@@ -52,10 +52,10 @@ flush <- function(..., quiet=TRUE) {
 
   ok <- intersect(can_flush, dots)
   if (length(ok) > 0) {
-    purrr::walk(ok, function(x) {
+    for(x in ok) {
       if ((!quiet) & interactive()) message(sprintf("Flushing '%s'...", x))
       memoise::forget(valid_flushed[[x]])
-    })
+    }
   }
 
 }

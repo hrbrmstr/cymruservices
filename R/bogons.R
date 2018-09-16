@@ -15,8 +15,9 @@
 
     bogons <- bogons$result
 
-    last_updated <- as.numeric(str_match_all(bogons[1],
-                                             "updated ([[:digit:]]+) ")[[1]][,2])
+    as.numeric(
+      stri_match_all_regex(bogons[1], "updated ([[:digit:]]+) ")[[1]][,2]
+    ) -> last_updated
 
     Sys.setenv(CYMRU_LAST_V4_BOGON=last_updated)
 
@@ -37,8 +38,9 @@
 
       bogons <- bogons$result
 
-      last_updated <- as.numeric(str_match_all(bogons[1],
-                                               "updated ([[:digit:]]+) ")[[1]][,2])
+      as.numeric(
+        stri_match_all_regex(bogons[1], "updated ([[:digit:]]+) ")[[1]][,2]
+      ) -> last_updated
 
       Sys.setenv(CYMRU_LAST_V4_BOGON=last_updated)
 
@@ -71,8 +73,9 @@
 
     bogons <- bogons$result
 
-    last_updated <- as.numeric(str_match_all(bogons[1],
-                                             "updated ([[:digit:]]+) ")[[1]][,2])
+    as.numeric(
+      stri_match_all_regex(bogons[1], "updated ([[:digit:]]+) ")[[1]][,2]
+    ) -> last_updated
 
     Sys.setenv(CYMRU_LAST_V6_BOGON=last_updated)
 
@@ -93,8 +96,10 @@
 
       bogons <- bogons$result
 
-      last_updated <- as.numeric(str_match_all(bogons[1],
-                                               "updated ([[:digit:]]+) ")[[1]][,2])
+      as.numeric(
+        stri_match_all_regex(bogons[1],
+        "updated ([[:digit:]]+) ")[[1]][,2]
+      ) -> last_updated
 
       Sys.setenv(CYMRU_LAST_V6_BOGON=last_updated)
 

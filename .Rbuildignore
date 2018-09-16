@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README.*$
+^NEWS.*$
 ^\.travis\.yml$
 ^CONDUCT\.md$
 ^dragonr\.jpg$
